@@ -23,12 +23,12 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator StartSpawning()
     {
-        var spawnPoint = _queue.Dequeue();
-        Instantiate(_enemyPrefab, spawnPoint.position, Quaternion.identity);
-        _queue.Enqueue(spawnPoint);
-
-        yield return new WaitForSeconds(_timeBetweenSpawns);
-        
-        StartCoroutine(StartSpawning());
+        while (_queue.Count > 0)
+        {
+            var spawnPoint = _queue.Dequeue();
+            Instantiate(_enemyPrefab, spawnPoint.position, Quaternion.identity);
+            _queue.Enqueue(spawnPoint);
+            yield return new WaitForSeconds(_timeBetweenSpawns);
+        }
     }
 }
