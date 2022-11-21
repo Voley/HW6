@@ -390,8 +390,8 @@ MonoBehaviour:
   - {fileID: 1172229085}
   - {fileID: 907004693}
   - {fileID: 1609104321}
-  _enemyPrefab: {fileID: 567282502125081111, guid: 66464724be91d4970851db7ece8aef5e, type: 3}
-  _timeBetweenSpawns: 2
+  _enemyPrefab: {fileID: 1112332316, guid: 66464724be91d4970851db7ece8aef5e, type: 3}
+  _timeBetweenSpawns: 1
 --- !u!1 &1689280283
 GameObject:
   m_ObjectHideFlags: 0
